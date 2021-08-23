@@ -24,7 +24,7 @@ export default HeaderPage
 
 const styles = StyleSheet.create({
     image: {
-        height: 35,
-        width: 35
+        height: 30,
+        width: 30
     }
 })

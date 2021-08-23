@@ -1,57 +1,76 @@
-import React from 'react';
-import { useState } from "react";
-import { SafeAreaView, Switch, Text, View, FlatList, TextInput, Alert, TouchableOpacity } from 'react-native';
+import React, {useState} from 'react';
+import {
+  ScrollView,
+  Text,
+  View,
+  SafeAreaView,
+  Modal,
+  Dimensions,
+} from 'react-native';
 import Button from '../../component/Button';
-import styles from './TicketDetails.style';
+import CustomModal from '../../component/CustomModal';
 import HeaderPage from '../../component/HeaderPage';
 
+import styles from './TicketDetails.style';
 
-function TicketDetails({ navigation }) {
-    return (
-        <View style={styles.container} >
-            <HeaderPage title="Detay" onPress={()=>navigation.goBack()}/>
-            <View style={styles.subContainer} >
-                
-                    <View style={styles.card}>
-                        <Text>Görevli</Text>
-                        <Text>...</Text>
-                        <Text>Talep Kodu:</Text>
-                        <Text>...</Text>
-                    </View>
-                    <View style={styles.card2}>
-                        <Text>Şirket Adı:</Text>
-                        <Text>...</Text>
-                        <Text>Müşteri Adı:</Text>
-                        <Text>...</Text>
-                        <Text>Email:</Text>
-                        <Text>...</Text>
-                        <Text>Telefon</Text>
-                        <Text>...</Text>
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
-                    </View>
+const Task = ({navigation}) => {
+  const [isModalVisible, setisModalVisible] = useState(false);
 
-                    <View style={styles.card3}>
-
-                        <Text>Ürün:</Text>
-                        <Text>...</Text>
-                        <Text>Konu:</Text>
-                        <Text>...</Text>
-                        <Text>Soru:</Text>
-                        <Text>...</Text>
-                        <Text>Detaylı açıklama</Text>
-                        <Text>...</Text>
-
-
-
-                    </View>
-                
-                <View style={{ flexDirection: "row",marginTop:25,justifyContent:'space-between' }}>
-                    <Button title="Dosya Göster" color="#2eb1bd" />
-                    <Button title="Görev Ekle" color="#2eb1bd" page={() => navigation.navigate('Ticket')} />
-                </View>
-            </View>
+  const changeModalVisible = () => {
+    setisModalVisible(!isModalVisible);
+  };
+  return (
+    <SafeAreaView style={styles.container}>
+      <Modal transparent={true} animationType="fade" visible={isModalVisible}>
+        <View
+          style={{
+            width: windowWidth,
+            height: windowHeight,
+            backgroundColor: 'black',
+            opacity: 0.5,
+          }}/>
+          <CustomModal deger={changeModalVisible} />
+      </Modal>
+      <HeaderPage title="Detay" onPress={() => navigation.goBack()} />
+      <ScrollView>
+        <View style={styles.view}>
+          <Text style={styles.textTitle}>Talep Kodu:</Text>
+          <Text style={styles.text}>1212121212</Text>
         </View>
-    )
+        <View style={styles.view}>
+          <Text style={styles.textTitle}>Şirket Adı:</Text>
+          <Text style={styles.text}>Öçal Holding</Text>
+          <Text style={styles.textTitle}>Müşteri Adı:</Text>
+          <Text style={styles.text}>Kübra Öçal</Text>
+        </View>
+        <View style={styles.view}>
+          <Text style={styles.textTitle}>Ürün:</Text>
+          <Text style={styles.text}>Yazılım</Text>
+          <Text style={styles.textTitle}>Konu:</Text>
+          <Text style={styles.text}>asdasdasd</Text>
+          <Text style={styles.textTitle}>Soru:</Text>
+          <Text style={styles.text}>Yazılım</Text>
+          <Text style={styles.textTitle}>Detaylı açıklama:</Text>
+          <Text style={styles.text}>asdasdasd</Text>
+        </View>
+        <View style={styles.view}>
+          <Text style={styles.textTitle}>Yüklenen dosya:</Text>
+          {/* <Image></Image> */}
+        </View>
+      </ScrollView>
+      <View style={styles.viewFooter}>
+        <Button
+          title="Görevlerime Ekle"
+          color="green"
+          page={() => changeModalVisible()}
+          //Görevlerime ekle deyince modal çıkıp onaylatsın onaylarsa görevlerime gitsin
+        />
+      </View>
+    </SafeAreaView>
+  );
+};
 
-}
-export default TicketDetails;
+export default Task;

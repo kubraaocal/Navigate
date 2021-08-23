@@ -7,7 +7,7 @@ const Setting = () => {
     return (
         <View style={styles.container}>
             <View style={styles.header} >
-                <Text style={styles.headertext}>Konu Ekle</Text>
+                <Text style={styles.headertext}>Soru Ekle</Text>
             </View>
             <View style={[styles.subcontainer, { paddingStart: 0, paddingEnd: 0 }]} >
                 <TextInput

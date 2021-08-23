@@ -10,7 +10,7 @@ export default StyleSheet.create({
     },
     mView:{
         width:windowWidth,
-        height:windowHeight/1.15,
+        height:windowHeight/1.2,
         alignItems:"center",
     },
     view:{

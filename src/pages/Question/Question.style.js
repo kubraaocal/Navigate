@@ -90,6 +90,11 @@ export default StyleSheet.create({
   },
   altmenu: {
     flex: 0.1,
-  }
+  },
+  viewFooter: {
+    flexDirection: 'row',
+    width: '100%',
+    justifyContent: 'space-evenly',
+  },
 
 });
