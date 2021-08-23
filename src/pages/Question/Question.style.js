@@ -1,15 +1,13 @@
-import { StyleSheet, Dimensions } from "react-native";
-import { StatusBar } from "expo-status-bar";
+import {StyleSheet, Dimensions} from 'react-native';
 
 export default StyleSheet.create({
   container: {
     backgroundColor: 'white',
     flex: 1,
   },
-
   headertext: {
-    fontWeight: "bold",
-    color: "white",
+    fontWeight: 'bold',
+    color: 'white',
     fontSize: 21,
     marginLeft: 15,
   },
@@ -50,17 +48,17 @@ export default StyleSheet.create({
   heading: {
     fontSize: 22,
     fontWeight: '900',
-    textTransform: 'uppercase',
+    textTransform: 'lowercase',
     letterSpacing: -1,
-    width: "90%"
+    width: '90%',
   },
   yatay: {
-    flexDirection: "row",
-    backgroundColor: "grey",
-    alignItems: "center"
+    flexDirection: 'row',
+    backgroundColor: 'grey',
+    alignItems: 'center',
   },
   soru_ekle: {
-    backgroundColor: "red",
+    backgroundColor: 'red',
     justifyContent: 'flex-end',
     flex: 0.1,
   },
@@ -70,7 +68,7 @@ export default StyleSheet.create({
     margin: 12,
     borderWidth: 1,
     padding: 5,
-    width: "83%",
+    width: '83%',
   },
   textinputt: {
     borderRadius: 10,
@@ -78,15 +76,15 @@ export default StyleSheet.create({
     margin: 12,
     borderWidth: 1,
     padding: 5,
-    width: "90%",
+    width: '90%',
   },
   multitextinput: {
     borderRadius: 10,
-    height:500,
+    height: 500,
     margin: 12,
     borderWidth: 1,
     padding: 5,
-    width: "90%",
+    width: '90%',
   },
   altmenu: {
     flex: 0.1,
@@ -96,5 +94,4 @@ export default StyleSheet.create({
     width: '100%',
     justifyContent: 'space-evenly',
   },
-
 });

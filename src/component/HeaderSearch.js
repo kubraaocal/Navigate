@@ -6,7 +6,7 @@ const windowHeight = Dimensions.get('window').height;
 
 const HeaderSearch = ({ title, onPress }) => {
     return (
-        <View style={{ flexDirection: "row", backgroundColor: "#021D49", height: windowHeight / 12, alignItems:"center",justifyContent:"flex-start"}}>
+        <View style={{ flexDirection: "row", backgroundColor: "#021D49", height: windowHeight / 14, alignItems:"center",justifyContent:"flex-start"}}>
             {/* <View style={{ width: windowWidth / 9, alignItems: "center", justifyContent: "center" }}>
                 <TouchableOpacity onPress={onPress} >
                     <Image style={styles.image} source={require('../assests/back.png')} />

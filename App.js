@@ -15,6 +15,7 @@ import Task from './src/pages/Task/Task';
 import TaskDetails from './src/pages/TaskDetail';
 import Answer from './src/pages/Answer';
 import Settings from './src/pages/Settings'
+import Person from './src/pages/Person'
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -55,7 +56,8 @@ export default function App() {
         <Stack.Screen name="TicketDetails" component={TicketDetails} />
         <Stack.Screen name="TaskDetails" component={TaskDetails} />
         <Stack.Screen name="Answer" component={Answer} />
-        <Stack.Screen name="SoruEkle" component={Setting} />
+        <Stack.Screen name="Question" component={Question} />
+        <Stack.Screen name="Person" component={Person}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
