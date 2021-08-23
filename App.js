@@ -16,6 +16,7 @@ import TaskDetails from './src/pages/TaskDetail';
 import Answer from './src/pages/Answer';
 import Settings from './src/pages/Settings'
 import Person from './src/pages/Person'
+import QuestionAdd from './src/pages/Question/QuestionAdd'
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -25,7 +26,7 @@ export default function App() {
   function MyTab() {
     return (
       <Tab.Navigator screenOptions={{headerShown: false}}>
-        <Tab.Screen name="Anasayfa" component={Ticket} />
+        <Tab.Screen name="Anasayfa" component={Ticket}  />
         <Tab.Screen name="Görevlerim" component={Task} />
         <Tab.Screen name="Daha fazla" component={Settings} />
         {/* <Tab.Screen name="CreateRequestt" component={CreateRequest} />
@@ -58,6 +59,7 @@ export default function App() {
         <Stack.Screen name="Answer" component={Answer} />
         <Stack.Screen name="Question" component={Question} />
         <Stack.Screen name="Person" component={Person}/>
+        <Stack.Screen name="QuestionAdd" component={QuestionAdd}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,7 +1,7 @@
 export default[
     {
         color: '#f2f2f2',
-        header: 'Şifremi Nasıl Değişririm',
+        header: 'Şifremi nasıl Değiştirebilirim',
         parag:'Gerçek rasgele sayı üreteci (GRSÜ) ile rasgele sayı üretmek için deterministik olmayan bir gürültü kaynağından yararlanılır. Rasgelelik derecesinin daha yüksek olması nedeniyle GRSÜ, SRSÜ sayı üreticisinden daha güvenli sayı üretir. '
     },
     {

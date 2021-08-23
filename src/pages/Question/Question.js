@@ -29,12 +29,10 @@ export function Question({navigation}) {
   return (
     <View style={styles.container}>
       <HeaderPage title="Sıkça Sorulan Sorular" onPress={() => navigation.goBack()} />
-      <View style={styles.subcontainer}>
         <ScrollView>
           <Transitioning.View
             ref={ref}
-            transition={transition}
-            style={styles.container}>
+            transition={transition}>
             <StatusBar hidden />
             {data.map(({color, header, parag}, index) => {
               return (
@@ -44,17 +42,16 @@ export function Question({navigation}) {
                     ref.current.animateNextTransition();
                     setCurrentIndex(index === currentIndex ? null : index);
                   }}
-                  style={styles.cardContainer}
                   activeOpacity={0.9}>
-                  <View style={[styles.container2]}>
+                  <View style={{borderBottomWidth:0.5,margin:5}}>
                     <View style={styles.yatay}>
-                      <Text style={[styles.heading, {backgroundColor: 'grey'}]}>
+                      <Text style={[styles.heading]}>
                         {header}
                       </Text>
                       <Icon
                         name="chevron-down-outline"
-                        size={33}
-                        color="white"></Icon>
+                        size={30}
+                        color="black"/>
                     </View>
                     {index === currentIndex && (
                       <View style={styles.subCategoriesList}>
@@ -69,12 +66,11 @@ export function Question({navigation}) {
             })}
           </Transitioning.View>
         </ScrollView>
-      </View>
       <View style={styles.viewFooter}>
         <Button
           title="Soru Ekle"
-          color="green"
-          page={() => navigation.navigate('SoruEkle')}
+          color="lightblue"
+          page={() => navigation.navigate('QuestionAdd')}
         />
       </View>
     </View>
