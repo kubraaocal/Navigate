@@ -1,5 +1,8 @@
 import {StyleSheet, Dimensions} from 'react-native';
 
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+
 export default StyleSheet.create({
   container: {
     flex: 1,
@@ -12,5 +15,12 @@ export default StyleSheet.create({
       alignItems:"center",
       justifyContent:"center",
       paddingTop:10,
+  },
+  viewFooter: {
+    justifyContent: 'center',
+    alignItems: 'flex-end',
+    position:"absolute",
+    marginTop:windowHeight-160,
+    marginLeft:"60%"
   }
 });

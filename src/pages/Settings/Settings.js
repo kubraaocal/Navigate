@@ -10,7 +10,7 @@ const Settings = ({navigation}) => {
         <Text style={styles.text}>Sıkça Sorulan Sorular</Text>
       </TouchableOpacity>
       <View style={{width:"100%",backgroundColor:"black",height:0.5}}/>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={()=>navigation.navigate('Suggestion')}>
         <Text style={styles.text}>Konu ve Öneriler</Text>
       </TouchableOpacity>
       <View style={{width:"100%",backgroundColor:"black",height:0.5}}/>

@@ -12,10 +12,9 @@ import data from './data';
 import {Transition, Transitioning} from 'react-native-reanimated';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-import styles from './Question.style';
-import Button from '../../component/Button';
+import styles from './Suggestion.style';
 import HeaderPage from '../../component/HeaderPage';
-import QuestionCard from '../../component/QuestionCard';
+import QuestionCard from '../../component/QuestionCard';//buraya özel card yapılabilir
 import CircleButton from '../../component/CircleButton';
 
 const DATA = [
@@ -33,7 +32,7 @@ const transition = (
   </Transition.Together>
 );
 
-export function Question({navigation}) {
+export function Suggestion({navigation}) {
   const [isModalVisible, setisModalVisible] = useState('absolute');
   const [isOpacity, setisOpacity] = useState(1);
   const [isClick1, setisClick1] = useState(true);
@@ -45,7 +44,7 @@ export function Question({navigation}) {
   return (
     <View style={styles.container}>
       <HeaderPage
-        title="Sıkça Sorulan Sorular"
+        title="Konu ve Öneriler"
         onPress={() => navigation.goBack()}
       />
       <View style={styles.top}>
@@ -117,4 +116,4 @@ export function Question({navigation}) {
   );
 }
 
-export default Question;
+export default Suggestion;

@@ -58,9 +58,9 @@ export default StyleSheet.create({
   viewFooter: {
     justifyContent: 'center',
     alignItems: 'flex-end',
-    position:"absolute",
+    position: 'absolute',
     marginTop: windowHeight - 200,
-    marginLeft:"60%"
+    marginLeft: '60%',
   },
   textInput: {
     borderWidth: 0.5,

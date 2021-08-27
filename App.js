@@ -8,7 +8,6 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 
 import CreateRequest from './src/pages/CreateRequest/CreateRequest';
 import Question from './src/pages/Question/Question';
-import Setting from './src/pages/Question/Setting';
 import Ticket from './src/pages/Ticket/Ticket';
 import TicketDetails from './src/pages/TicketDetails/TicketDetails';
 import Task from './src/pages/Task/Task';
@@ -17,6 +16,9 @@ import Answer from './src/pages/Answer';
 import Settings from './src/pages/Settings'
 import Person from './src/pages/Person'
 import QuestionAdd from './src/pages/Question/QuestionAdd'
+import Suggestion from './src/pages/Suggestion'
+import SuggestionAdd from './src/pages/Suggestion/SuggestionAdd'
+
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -60,6 +62,9 @@ export default function App() {
         <Stack.Screen name="Question" component={Question} />
         <Stack.Screen name="Person" component={Person}/>
         <Stack.Screen name="QuestionAdd" component={QuestionAdd}/>
+        <Stack.Screen name="Suggestion" component={Suggestion}/>
+        <Stack.Screen name="SuggestionAdd" component={SuggestionAdd}/>
+        <Stack.Screen name="CreateRequest" component={CreateRequest}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

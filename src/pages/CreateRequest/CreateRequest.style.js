@@ -6,18 +6,12 @@ const windowHeight = Dimensions.get('window').height;
 export default StyleSheet.create({
     container:{
         flex:1,
-        backgroundColor:"#E8F0F2",
-        alignItems:"center",
-        justifyContent:"center"
+        alignItems:"center"
     },
     page:{
-        height:windowHeight/1.1,
+        height:windowHeight/1.25,
         width:"95%",
-        borderColor:"gray",
-        borderWidth:1,
         padding:5,
-        borderRadius:18,
-        backgroundColor:"white"
     },
     view:{
         width:"100%",
@@ -32,9 +26,13 @@ export default StyleSheet.create({
     },
     input:{
         fontSize:18,
-        marginTop:10,
+        marginTop:0,
         borderWidth:1,
         lineHeight:4,
         borderColor:"lightgray"
+    },
+    viewButton:{
+        width:"100%",
+        padding:5,
     }
 })

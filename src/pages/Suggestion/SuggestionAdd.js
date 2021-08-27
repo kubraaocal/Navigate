@@ -3,9 +3,9 @@ import {TextInput, View} from 'react-native';
 
 import Button from '../../component/Button';
 import HeaderPage from '../../component/HeaderPage';
-import styles from './Question.style';
+import styles from './Suggestion.style';
 
-const QuestionAdd = ({navigation}) => {
+const SuggestionAdd = ({navigation}) => {
   return (
     <View style={styles.container}>
       <HeaderPage title="Soru Ekle" onPress={() => navigation.goBack()} />
@@ -35,4 +35,4 @@ const QuestionAdd = ({navigation}) => {
     </View>
   );
 };
-export default QuestionAdd;
+export default SuggestionAdd;
