@@ -10,17 +10,17 @@ import {
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-const CustomModal = ({deger}) => {
+const CustomModal = ({deger,text,git}) => {
   return (
     <View style={styles.container}>
         <View style={styles.view}>
           <View style={styles.modal}>
-            <Text>Görevlerime eklemek istiyor musunuz?</Text>
+            <Text>{text}</Text>
           </View>
           <View style={styles.bottom}>
             <TouchableOpacity
               style={[styles.button, {borderEndWidth: 0.1}]}
-              onPress={() => deger()}>
+              onPress={()=>{git(),deger()}}>
               <Text>Evet</Text>
             </TouchableOpacity>
             <TouchableOpacity

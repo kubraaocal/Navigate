@@ -9,6 +9,8 @@ import styles from './Task.style';
 import SelectDropdown from 'react-native-select-dropdown';
 import HeaderSearch from '../../component/HeaderSearch';
 import CustomTask from '../../component/CustomTask'
+import CustomTicket from '../../component/CustomTicket';
+
 
 function Task({navigation}) {
   const countries = ['Yeni Biletler', 'Eski Biletler', 'A-Z Sıralama', 'Z-A Sıralama'];
@@ -40,7 +42,7 @@ function Task({navigation}) {
           <FlatList
             data={DATA}
             renderItem={() => (
-              <CustomTask
+              <CustomTicket
                 onclick={() => navigation.navigate('TaskDetails')}
               />
             )}

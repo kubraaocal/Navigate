@@ -1,14 +1,50 @@
-import React from 'react';
-import {ScrollView, Text, View, Image, SafeAreaView} from 'react-native';
+import React, {useState} from 'react';
+import {
+  ScrollView,
+  Text,
+  View,
+  Image,
+  SafeAreaView,
+  Modal,
+  Dimensions,
+} from 'react-native';
 import Button from '../../component/Button';
 import HeaderPage from '../../component/HeaderPage';
 
 import styles from './TaskDetail.style';
+import CustomModal from '../../component/CustomModal';
+
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
 const Task = ({navigation}) => {
+  const [isModalVisible, setisModalVisible] = useState(false);
+
+  const changeModalVisible = () => {
+    setisModalVisible(!isModalVisible);
+  };
+
+  const git = () => {
+    navigation.navigate('Anasayfa');
+  };
   return (
     <SafeAreaView style={styles.container}>
-      <HeaderPage title="Detay" onPress={()=>navigation.goBack()}/>
+      <Modal transparent={true} animationType="fade" visible={isModalVisible}>
+        <View
+          style={{
+            width: windowWidth,
+            height: windowHeight,
+            backgroundColor: 'black',
+            opacity: 0.5,
+          }}
+        />
+        <CustomModal
+          deger={changeModalVisible}
+          git={git}
+          text="Görevlerimden silmek istiyor musunuz?"
+        />
+      </Modal>
+      <HeaderPage title="Detay" onPress={() => navigation.goBack()} />
       <ScrollView>
         <View style={styles.view}>
           <Text style={styles.textTitle}>Talep Kodu:</Text>
@@ -32,13 +68,21 @@ const Task = ({navigation}) => {
         </View>
         <View style={styles.view}>
           <Text style={styles.textTitle}>Yüklenen dosya:</Text>
-          {/* <Image></Image> */}
+          <Image></Image>
         </View>
       </ScrollView>
       <View style={styles.viewFooter}>
-          <Button title="Cevapla" color="green" page={()=>navigation.navigate('Answer')} />
-          <Button title="İptal Et" color="red" page={()=>navigation.navigate('Answer')} />
-        </View>
+        <Button
+          title="Cevapla"
+          color="green"
+          page={() => navigation.navigate('Answer')}
+        />
+        <Button
+          title="İptal Et"
+          color="red"
+          page={() => changeModalVisible()}
+        />
+      </View>
     </SafeAreaView>
   );
 };

@@ -22,6 +22,11 @@ const Task = ({navigation}) => {
   const changeModalVisible = () => {
     setisModalVisible(!isModalVisible);
   };
+
+  const git = () => {
+    navigation.navigate('Görevlerim');
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <Modal transparent={true} animationType="fade" visible={isModalVisible}>
@@ -32,7 +37,7 @@ const Task = ({navigation}) => {
             backgroundColor: 'black',
             opacity: 0.5,
           }}/>
-          <CustomModal deger={changeModalVisible} />
+          <CustomModal deger={changeModalVisible} text="Görevlerime eklemek istiyor musunuz?" git={git} />
       </Modal>
       <HeaderPage title="Detay" onPress={() => navigation.goBack()} />
       <ScrollView>

@@ -18,6 +18,8 @@ import HeaderPage from '../../component/HeaderPage';
 
 const CreateRequest = ({navigation}) => {
   const [selectedValue, setSelectedValue] = useState('java');
+  const [selectedValue1, setSelectedValue1] = useState('java');
+  const [selectedValue2, setSelectedValue2] = useState('java');
 
   return (
     <View style={styles.container}>
@@ -28,8 +30,8 @@ const CreateRequest = ({navigation}) => {
           <Picker
             selectedValue={selectedValue}
             style={{height: 50, width: '100%'}}
-            onValueChange={(itemValue, itemIndex) =>
-              setSelectedValue(itemValue)
+            onValueChange={(itemValue1, itemIndex) =>
+              setSelectedValue(itemValue1)
             }>
             <Picker.Item
               style={{color: 'gray'}}
@@ -47,10 +49,10 @@ const CreateRequest = ({navigation}) => {
         <View style={styles.view}>
           <Text style={styles.text}>Konu seçiniz</Text>
           <Picker
-            selectedValue={selectedValue}
+            selectedValue={selectedValue1}
             style={{height: 50, width: '100%'}}
-            onValueChange={(itemValue, itemIndex) =>
-              setSelectedValue(itemValue)
+            onValueChange={(itemValue2, itemIndex) =>
+              setSelectedValue1(itemValue2)
             }>
             <Picker.Item
               style={{color: 'gray'}}
@@ -68,10 +70,10 @@ const CreateRequest = ({navigation}) => {
         <View style={styles.view}>
           <Text style={styles.text}>Soru başlığı</Text>
           <Picker
-            selectedValue={selectedValue}
+            selectedValue={selectedValue2}
             style={{height: 50, width: '100%'}}
-            onValueChange={(itemValue, itemIndex) =>
-              setSelectedValue(itemValue)
+            onValueChange={(itemValue3, itemIndex) =>
+              setSelectedValue2(itemValue3)
             }>
             <Picker.Item
               style={{color: 'gray'}}

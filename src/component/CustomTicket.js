@@ -80,8 +80,8 @@ function CustomTicket({onclick}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: windowWidth-30,
-    marginBottom:10,
+    width: windowWidth - 30,
+    marginBottom: 10,
     backgroundColor: 'white',
     borderRadius: 10,
   },
@@ -94,7 +94,10 @@ const styles = StyleSheet.create({
     borderBottomColor: 'black',
     borderBottomWidth: 1,
   },
-  viewCenter: {borderBottomColor: 'black', borderBottomWidth: 1},
+  viewCenter: {
+    borderBottomColor: 'black',
+    borderBottomWidth: 1,
+  },
   viewFooter: {
     alignItems: 'center',
     justifyContent: 'center',

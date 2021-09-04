@@ -10,7 +10,7 @@ export default StyleSheet.create({
     },
     mView:{
         width:windowWidth,
-        height:windowHeight/1.2,
+        height:windowHeight-150,
         alignItems:"center",
     },
     view:{
@@ -43,7 +43,7 @@ export default StyleSheet.create({
         backgroundColor:"white",
     },
     buttonView:{
-        marginTop:20,
+        marginTop:10,
         width:windowWidth-20,
         borderBottomWidth:1,
     }  

@@ -19,7 +19,12 @@ import CustomTicket from '../../component/CustomTicket';
 import CircleButton from '../../component/CircleButton';
 
 function Ticket({navigation}) {
-  const countries = ['Yeni Biletler', 'Eski Biletler', 'A-Z Sıralama', 'Z-A Sıralama'];
+  const countries = [
+    'Yeni Biletler',
+    'Eski Biletler',
+    'A-Z Sıralama',
+    'Z-A Sıralama',
+  ];
 
   const DATA = [
     {
@@ -62,8 +67,8 @@ function Ticket({navigation}) {
         </View>
       </ScrollView>
       <View style={styles.viewFooter}>
-          <CircleButton navigation={()=>navigation.navigate('CreateRequest')} />
-        </View>
+        <CircleButton navigation={() => navigation.navigate('CreateRequest')} />
+      </View>
     </View>
   );
 }

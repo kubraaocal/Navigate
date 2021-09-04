@@ -79,7 +79,6 @@ function CustomTicket({onclick}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    height: windowsHeight / 2.5,
     width: windowWidth-30,
     marginBottom:10,
     backgroundColor: 'white',
