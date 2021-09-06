@@ -9,7 +9,6 @@ import {
 } from 'react-native';
 import {Picker} from '@react-native-picker/picker';
 
-import Header from '../../component/Header';
 import styles from './CreateRequest.style';
 import Button from '../../component/Button';
 import HeaderPage from '../../component/HeaderPage';
@@ -23,7 +22,7 @@ const CreateRequest = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <HeaderPage title="Yeni Bilet Ekle" onPress={() => navigation.goBack()} />
+      {/* <HeaderPage title="Yeni Bilet Ekle" onPress={() => navigation.goBack()} /> */}
       <View style={styles.page}>
         <View style={styles.view}>
           <Text style={styles.text}>Ürün seçiniz</Text>

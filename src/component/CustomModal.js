@@ -15,18 +15,18 @@ const CustomModal = ({deger,text,git}) => {
     <View style={styles.container}>
         <View style={styles.view}>
           <View style={styles.modal}>
-            <Text>{text}</Text>
+            <Text style={styles.text}>{text}</Text>
           </View>
           <View style={styles.bottom}>
             <TouchableOpacity
               style={[styles.button, {borderEndWidth: 0.1}]}
               onPress={()=>{git(),deger()}}>
-              <Text>Evet</Text>
+              <Text style={styles.text}>Evet</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={[styles.button, {borderStartWidth: 0.2}]}
               onPress={() => deger()}>
-              <Text>Hayır</Text>
+              <Text style={styles.text}>Hayır</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -85,4 +85,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  text:{
+    fontSize:16
+  }
 });

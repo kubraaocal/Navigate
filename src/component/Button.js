@@ -24,34 +24,7 @@ const styles = StyleSheet.create({
     },
     title:{
         fontSize:18,
-        color:"white"
+        color:"white",
+        fontWeight:"bold"
     }
 })
-// import React from 'react'
-// import { StyleSheet, Text, View,TouchableOpacity} from 'react-native'
-
-// const Button = ({title}) => {
-//     return (
-//         <TouchableOpacity style={styles.container}>
-//             <Text style={styles.title}>{title}</Text>
-//         </TouchableOpacity>
-//     )
-// }
-
-// export default Button
-
-// const styles = StyleSheet.create({
-//     container:{
-//         height:50,
-//         width:"45%",
-//         marginBottom:5,
-//         backgroundColor:"#2eb1bd",
-//         justifyContent:"center",
-//         alignItems:"center",
-//         borderRadius:10
-//     },
-//     title:{
-//         fontSize:18,
-//         color:"white"
-//     }
-// })

@@ -44,7 +44,7 @@ const Task = ({navigation}) => {
           text="Görevlerimden silmek istiyor musunuz?"
         />
       </Modal>
-      <HeaderPage title="Detay" onPress={() => navigation.goBack()} />
+      {/* <HeaderPage title="Detay" onPress={() => navigation.goBack()} /> */}
       <ScrollView>
         <View style={styles.view}>
           <Text style={styles.textTitle}>Talep Kodu:</Text>

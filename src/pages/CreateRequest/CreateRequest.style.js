@@ -21,11 +21,11 @@ export default StyleSheet.create({
         marginBottom:10
     },
     text:{
-        fontSize:18,
+        fontSize:16,
         fontWeight:"normal"
     },
     input:{
-        fontSize:18,
+        fontSize:16,
         marginTop:0,
         borderWidth:1,
         lineHeight:4,

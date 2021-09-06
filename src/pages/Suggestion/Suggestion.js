@@ -50,7 +50,7 @@ export function Suggestion({navigation}) {
                   setCurrentIndex(index === currentIndex ? null : index);
                 }}
                 activeOpacity={0.9}>
-                <View style={{borderBottomWidth: 0.5, margin: 5}}>
+                <View style={{borderBottomWidth: 0.2, margin: 5}}>
                   <View style={styles.yatay}>
                     <Text style={[styles.heading]}>{header}</Text>
                     <Icon name="chevron-down-outline" size={30} color="black" />
@@ -69,7 +69,7 @@ export function Suggestion({navigation}) {
         </Transitioning.View>
       </ScrollView>
       <View style={styles.viewFooter}>
-        <CircleButton navigation={() => navigation.navigate('QuestionAdd')} />
+        <CircleButton navigation={() => navigation.navigate('SuggestionAdd')} />
       </View>
     </View>
   );

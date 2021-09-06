@@ -30,9 +30,9 @@ const PersonCard = ({navigation, item}) => {
               resizeMode="cover"
               source={item.image}
               style={{
-                borderRadius: 80/2,
-                height: 80,
-                width: 80,
+                borderRadius: 70/2,
+                height: 70,
+                width: 70,
               }}></Image>
           </View>
         <View style={styles.view_text}>
@@ -53,13 +53,13 @@ export default PersonCard;
 
 const styles = StyleSheet.create({
   text_text: {
-    fontSize: 17,
+    fontSize: 14,
     color: 'gray',
   },
   text_title: {
     fontStyle: 'normal',
     fontWeight: 'bold',
-    fontSize: 20,
+    fontSize: 18,
   },
   view_message: {
     flexDirection: 'row',
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     width: windowWidth / 5,
   },
   view_text: {
-    margin: 15,
+    margin: 0,
     width: windowWidth / 1.8,
   },
 });

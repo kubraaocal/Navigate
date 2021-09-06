@@ -17,7 +17,7 @@ const DATA = [
 const Person = ({navigation}) => {
     return (
         <View style={styles.container}>
-            <HeaderPage title="Arkadaşlarım" onPress={()=>navigation.goBack()}/>
+            {/* <HeaderPage title="Arkadaşlarım" onPress={()=>navigation.goBack()}/> */}
                 <FlatList
                     style={{ width: Dimensions.get('window').width, maxHeight: "100%" }}
                     data={DATA}

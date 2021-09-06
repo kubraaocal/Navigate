@@ -7,36 +7,45 @@ import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs
 const Tab = createMaterialTopTabNavigator();
 
 import styles from './Settings.style';
-import Sorusayfasi from '../Question/QuestionPage';
-import Question from '../Question/Question';
-import KonuSayfasi from '../Suggestion/SuggestionPage'
-
-
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Settings = ({navigation}) => {
   return (
-    <View>
+    <View style={styles.container}>
       <TouchableOpacity
         style={styles.button}
         onPress={() => navigation.navigate('Sorusayfasi')}>
         <Text style={styles.text}>Sıkça Sorulan Sorular</Text>
+        <Icon
+          name="chevron-forward-outline"
+          color="darkgray"
+          size={20}
+          style={{marginBottom: 10}}
+        />
       </TouchableOpacity>
-      <View style={{width: '100%', backgroundColor: 'black', height: 0.5}} />
       <TouchableOpacity
         style={styles.button}
         onPress={() => navigation.navigate('KonuSayfasi')}>
         <Text style={styles.text}>Konu ve Öneriler</Text>
+        <Icon
+          name="chevron-forward-outline"
+          color="darkgray"
+          size={20}
+          style={{marginBottom: 10}}
+        />
       </TouchableOpacity>
-      <View style={{width: '100%', backgroundColor: 'black', height: 0.5}} />
       <TouchableOpacity
         style={styles.button}
         onPress={() => navigation.navigate('Person')}>
         <Text style={styles.text}>Ekip Arkadaşlarım</Text>
+        <Icon
+          name="chevron-forward-outline"
+          color="darkgray"
+          size={20}
+          style={{marginBottom: 10}}
+        />
       </TouchableOpacity>
-      <View style={{width: '100%', backgroundColor: 'black', height: 0.5}} />
     </View>
-
-
 
     // <View style={{flex:1}}>
     //   <HeaderPage title="sıkça sorulan sorular"/>

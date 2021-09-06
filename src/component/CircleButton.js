@@ -9,7 +9,7 @@ const CircleButton = ({navigation}) => {
       <TouchableOpacity
         onPress={navigation}
         style={styles.roundButton1}>
-            <Icon name="pencil-sharp" size={30} color="black"/>
+            <Icon name="pencil-sharp" size={25} color="black"/>
       </TouchableOpacity>
     </View>
   );

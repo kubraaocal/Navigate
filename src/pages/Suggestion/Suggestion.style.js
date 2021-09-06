@@ -11,7 +11,7 @@ export default StyleSheet.create({
   headertext: {
     fontWeight: 'bold',
     color: 'white',
-    fontSize: 21,
+    fontSize: 16,
     marginLeft: 15,
   },
   image: {
@@ -36,7 +36,7 @@ export default StyleSheet.create({
     flexGrow: 1,
   },
   body: {
-    fontSize: 18,
+    fontSize: 16,
     lineHeight: 20 * 1.2,
     textAlign: 'left',
   },
@@ -44,7 +44,7 @@ export default StyleSheet.create({
     margin: 10,
   },
   heading: {
-    fontSize: 22,
+    fontSize: 18,
     fontWeight: '900',
     // textTransform: 'lowercase',
     letterSpacing: -1,

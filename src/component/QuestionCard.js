@@ -35,13 +35,13 @@ export default QuestionCard;
 
 const styles = StyleSheet.create({
   text_text: {
-    fontSize: 17,
+    fontSize: 14,
     color: 'gray',
   },
   text_title: {
     fontStyle: 'normal',
     fontWeight: 'bold',
-    fontSize: 20,
+    fontSize: 18,
   },
   view_message: {
     flexDirection: 'row',

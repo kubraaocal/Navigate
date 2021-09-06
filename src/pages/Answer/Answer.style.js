@@ -29,8 +29,9 @@ export default StyleSheet.create({
         height:"80%",
     },
     text:{
+        fontSize:16,
         textAlign:'left',
-        width:40,
+        width:45,
         height:25,
         marginRight:2
     },

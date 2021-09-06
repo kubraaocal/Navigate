@@ -8,7 +8,6 @@ import {
 import styles from './Task.style';
 import SelectDropdown from 'react-native-select-dropdown';
 import HeaderSearch from '../../component/HeaderSearch';
-import CustomTask from '../../component/CustomTask'
 import CustomTicket from '../../component/CustomTicket';
 
 

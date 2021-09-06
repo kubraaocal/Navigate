@@ -47,7 +47,7 @@ export function Question({navigation}) {
                   setCurrentIndex(index === currentIndex ? null : index);
                 }}
                 activeOpacity={0.9}>
-                <View style={{borderBottomWidth: 0.5, margin: 5}}>
+                <View style={{borderBottomWidth: 0.2, margin: 5}}>
                   <View style={styles.yatay}>
                     <Text style={[styles.heading]}>{header}</Text>
                     <Icon name="chevron-down-outline" size={30} color="black" />

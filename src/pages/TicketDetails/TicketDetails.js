@@ -39,7 +39,7 @@ const Task = ({navigation}) => {
           }}/>
           <CustomModal deger={changeModalVisible} text="Görevlerime eklemek istiyor musunuz?" git={git} />
       </Modal>
-      <HeaderPage title="Detay" onPress={() => navigation.goBack()} />
+      {/* <HeaderPage title="Detay" onPress={() => navigation.goBack()} /> */}
       <ScrollView>
         <View style={styles.view}>
           <Text style={styles.textTitle}>Talep Kodu:</Text>

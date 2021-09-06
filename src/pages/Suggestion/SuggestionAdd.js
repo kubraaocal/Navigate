@@ -8,7 +8,7 @@ import styles from './Suggestion.style';
 const SuggestionAdd = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <HeaderPage title="Soru Ekle" onPress={() => navigation.goBack()} />
+      {/* <HeaderPage title="Soru Ekle" onPress={() => navigation.goBack()} /> */}
       <View style={{padding: 10}}>
         <TextInput
           style={styles.textInput}

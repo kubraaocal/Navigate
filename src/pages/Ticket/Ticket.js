@@ -1,17 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
-import {
-  SafeAreaView,
-  Switch,
-  Text,
-  View,
-  TextInput,
-  Button,
-  Alert,
-  TouchableOpacity,
-  FlatList,
-  ScrollView,
-} from 'react-native';
+import {View, FlatList, ScrollView} from 'react-native';
 import styles from './Ticket.style';
 import SelectDropdown from 'react-native-select-dropdown';
 import HeaderSearch from '../../component/HeaderSearch';
@@ -29,13 +18,7 @@ function Ticket({navigation}) {
   const DATA = [
     {
       name: 1,
-    },
-    {
-      name: 2,
-    },
-    {
-      name: 3,
-    },
+    }
   ];
   return (
     <View style={styles.container}>

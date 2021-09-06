@@ -15,6 +15,7 @@ export default StyleSheet.create({
       alignItems:"center",
       justifyContent:"center",
       paddingTop:10,
+      width:windowWidth,
   },
   viewFooter: {
     justifyContent: 'center',

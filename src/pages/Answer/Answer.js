@@ -12,7 +12,7 @@ const Answer = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <HeaderPage title="Mail Gönder" onPress={() => navigation.goBack()} />
+      {/* <HeaderPage title="Mail Gönder" onPress={() => navigation.goBack()} /> */}
       <View style={styles.mView}>
         <View style={styles.view}>
           <Text style={styles.text}>CC:</Text>

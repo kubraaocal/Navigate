@@ -13,7 +13,7 @@ const windowWidth = Dimensions.get('window').width;
 
 function CustomTicket({onclick}) {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onclick}>
       <View style={styles.viewTop}>
         <View style={{flexDirection: 'row'}}>
           <View style={styles.view}>
@@ -31,77 +31,49 @@ function CustomTicket({onclick}) {
             <Text style={{color: 'black'}}>Gösterilecek Cevap</Text>
           </View>
           <View style={styles.view}>
-            <Text style={{fontWeight: 'bold', fontSize: 16}}>
+            <Text style={styles.textTitle}>
               Oluşturma Tarihi:
             </Text>
             <Text style={{color: 'black'}}>Gösterilecek Cevap</Text>
           </View>
         </View>
-      </View>
-      <View style={styles.viewCenter}>
         <View style={{flexDirection: 'row'}}>
           <View style={styles.view}>
-            <Text style={{fontWeight: 'bold', fontSize: 16}}>Şirket Adı:</Text>
+            <Text style={styles.textTitle}>Şirket Adı:</Text>
             <Text style={{color: 'black'}}>Gösterilecek Cevap</Text>
           </View>
           <View style={styles.view}>
-            <Text style={{fontWeight: 'bold', fontSize: 16}}>Görevli Adı:</Text>
-            <Text style={{color: 'black'}}>Gösterilecek Cevap</Text>
-          </View>
-        </View>
-        <View style={{flexDirection: 'row'}}>
-          <View style={styles.view}>
-            <Text style={{fontWeight: 'bold', fontSize: 16}}>
-              Gönderici Adı:
-            </Text>
-            <Text style={{color: 'black'}}>Gösterilecek Cevap</Text>
-          </View>
-          <View style={styles.view}>
-            <Text style={{fontWeight: 'bold', fontSize: 16}}>
+            <Text style={styles.textTitle}>
               Bitiş Tarihi:
             </Text>
             <Text style={{color: 'black'}}>Gösterilecek Cevap</Text>
           </View>
         </View>
-        <View style={styles.view}>
-          <Text style={{fontWeight: 'bold', fontSize: 16}}>Talep Kodu:</Text>
-          <Text style={{color: 'black'}}>Gösterilecek Cevap</Text>
-        </View>
       </View>
-      <View style={styles.viewFooter}>
-        <TouchableOpacity onPress={onclick}>
-          <Text style={{fontWeight: 'bold', fontSize: 16}}>Detaya Git</Text>
-        </TouchableOpacity>
-      </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: windowWidth - 30,
-    marginBottom: 10,
+    width: windowWidth-20,
+    margin:10,
     backgroundColor: 'white',
     borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 9,
+      height: 9,
+    },
+    shadowOpacity: 0.48,
+    shadowRadius: 11.95,
+    elevation: 5,
   },
   view: {
     width: windowWidth / 2.18,
     padding: 3,
     margin: 3,
-  },
-  viewTop: {
-    borderBottomColor: 'black',
-    borderBottomWidth: 1,
-  },
-  viewCenter: {
-    borderBottomColor: 'black',
-    borderBottomWidth: 1,
-  },
-  viewFooter: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 10,
   },
   textTitle: {
     color: 'black',

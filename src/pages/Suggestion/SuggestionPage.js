@@ -19,7 +19,7 @@ function Fonk() {
 const SuggestionPage = ({navigation}) => {
   return (
     <View style={{flex:1}}>
-      <HeaderPage title="Konu ve Öneriler" onPress={()=>navigation.goBack()}/>
+      {/* <HeaderPage title="Konu ve Öneriler" onPress={()=>navigation.goBack()}/> */}
       <Fonk />
     </View>
   );
