@@ -18,7 +18,13 @@ function Ticket({navigation}) {
   const DATA = [
     {
       name: 1,
-    }
+    },
+    {
+      name: 2,
+    },
+    {
+      name: 3,
+    },
   ];
   return (
     <View style={styles.container}>
@@ -26,17 +32,30 @@ function Ticket({navigation}) {
         title="Ticket"
         onPress={() => navigation.navigate('Home')}
       />
-      <SelectDropdown
-        defaultButtonText="Sıralama"
-        data={countries}
-        onSelect={(selectedItem, index) => {}}
-        buttonTextAfterSelection={(selectedItem, index) => {
-          return selectedItem;
-        }}
-        rowTextForSelection={(item, index) => {
-          return item;
-        }}
-      />
+      <View style={{flexDirection:"row"}}>
+        <SelectDropdown
+          defaultButtonText="Sıralama"
+          data={countries}
+          onSelect={(selectedItem, index) => {}}
+          buttonTextAfterSelection={(selectedItem, index) => {
+            return selectedItem;
+          }}
+          rowTextForSelection={(item, index) => {
+            return item;
+          }}
+        />
+        <SelectDropdown
+          defaultButtonText="Filtrele"
+          data={countries}
+          onSelect={(selectedItem, index) => {}}
+          buttonTextAfterSelection={(selectedItem, index) => {
+            return selectedItem;
+          }}
+          rowTextForSelection={(item, index) => {
+            return item;
+          }}
+        />
+      </View>
       <ScrollView>
         <View style={styles.anaView}>
           <FlatList

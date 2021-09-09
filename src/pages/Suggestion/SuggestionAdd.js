@@ -13,13 +13,13 @@ const SuggestionAdd = ({navigation}) => {
         <TextInput
           style={styles.textInput}
           onChangeText={null}
-          placeholder="Soru başlığını girin"
+          placeholder="Konu başlığı girin"
         />
         <View style={{margin:5}}/>
         <TextInput
           style={styles.textInput}
           onChangeText={null}
-          placeholder="Soruyu açıklayın"
+          placeholder="Konuyu açıklayın"
           multiline={true}
           numberOfLines={30}
           textAlignVertical="top"

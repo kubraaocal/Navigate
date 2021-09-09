@@ -9,7 +9,7 @@ export default StyleSheet.create({
         alignItems:"center"
     },
     page:{
-        height:windowHeight/1.25,
+        height:windowHeight/1.5,
         width:"95%",
         padding:5,
     },
@@ -18,7 +18,7 @@ export default StyleSheet.create({
         padding:5,
         borderRadius:5,
         borderBottomWidth:0.5,
-        marginBottom:10
+        marginBottom:10,
     },
     text:{
         fontSize:16,
@@ -32,7 +32,13 @@ export default StyleSheet.create({
         borderColor:"lightgray"
     },
     viewButton:{
+        marginTop:"10%",
         width:"100%",
         padding:5,
-    }
+    },
+    buttonView:{
+        marginTop:0,
+        width:windowWidth-20,
+        borderBottomWidth:1,
+    } 
 })

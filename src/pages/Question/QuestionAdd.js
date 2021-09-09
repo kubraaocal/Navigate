@@ -9,7 +9,7 @@ const QuestionAdd = ({navigation}) => {
   return (
     <View style={styles.container}>
       {/* <HeaderPage title="Soru Ekle" onPress={() => navigation.goBack()} /> */}
-      <View style={{padding: 10}}>
+      <View style={{height:"85%",padding: 10}}>
         <TextInput
           style={styles.textInput}
           onChangeText={null}
@@ -21,7 +21,7 @@ const QuestionAdd = ({navigation}) => {
           onChangeText={null}
           placeholder="Soruyu açıklayın"
           multiline={true}
-          numberOfLines={30}
+          numberOfLines={27}
           textAlignVertical="top"
         />
       </View>

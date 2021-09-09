@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView, FlatList } from 'react-native';
-import ListItem, { Separator } from '../Notifications';
+import ListItem, { Separator } from '../Swipe';
 
 const styles = StyleSheet.create({
   container: {
