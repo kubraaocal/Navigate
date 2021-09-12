@@ -1,11 +1,25 @@
 import React from 'react';
 import {useState} from 'react';
-import {View, FlatList, ScrollView} from 'react-native';
+import {
+  View,
+  FlatList,
+  ScrollView,
+  TouchableOpacity,
+  Text,
+  Modal,
+  Dimensions,
+} from 'react-native';
 import styles from './Ticket.style';
 import SelectDropdown from 'react-native-select-dropdown';
 import HeaderSearch from '../../component/HeaderSearch';
 import CustomTicket from '../../component/CustomTicket';
 import CircleButton from '../../component/CircleButton';
+import TopButton from '../../component/ShortandFilter'
+
+
+
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
 function Ticket({navigation}) {
   const countries = [
@@ -26,36 +40,19 @@ function Ticket({navigation}) {
       name: 3,
     },
   ];
+
+  const [isModalVisible, setisModalVisible] = useState(false);
+
+  const changeModalVisible = () => {
+    setisModalVisible(!isModalVisible);
+  };
   return (
     <View style={styles.container}>
       <HeaderSearch
         title="Ticket"
         onPress={() => navigation.navigate('Home')}
       />
-      <View style={{flexDirection:"row"}}>
-        <SelectDropdown
-          defaultButtonText="Sıralama"
-          data={countries}
-          onSelect={(selectedItem, index) => {}}
-          buttonTextAfterSelection={(selectedItem, index) => {
-            return selectedItem;
-          }}
-          rowTextForSelection={(item, index) => {
-            return item;
-          }}
-        />
-        <SelectDropdown
-          defaultButtonText="Filtrele"
-          data={countries}
-          onSelect={(selectedItem, index) => {}}
-          buttonTextAfterSelection={(selectedItem, index) => {
-            return selectedItem;
-          }}
-          rowTextForSelection={(item, index) => {
-            return item;
-          }}
-        />
-      </View>
+      <TopButton />
       <ScrollView>
         <View style={styles.anaView}>
           <FlatList

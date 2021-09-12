@@ -10,7 +10,7 @@ const Answer = ({navigation}) => {
   const [documentName, setDocumentName] = useState('');
   async function openDocumentFile() {
     try {
-      const res = await DocumentPicker.pick({
+      const res = await DocumentPicker.pickSingle({
         type: [DocumentPicker.types.allFiles],
       });
       console.log(

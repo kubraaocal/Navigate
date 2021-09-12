@@ -21,17 +21,19 @@ const CreateRequest = ({navigation}) => {
   const [selectedValue2, setSelectedValue2] = useState('java');
 
   const [documentName, setDocumentName] = useState('');
-  async function openDocumentFile() {
+
+
+   async function openDocumentFile() {
     try {
-      const res = await DocumentPicker.pick({
+      const res = await DocumentPicker.pickSingle({
         type: [DocumentPicker.types.allFiles],
-      });
+      })
       console.log(
         res.uri,
         res.type, // mime type
         res.name,
         res.size,
-      );
+      )
       setDocumentName(res.name);
       console.log(documentName);
     } catch (err) {
@@ -134,7 +136,7 @@ const CreateRequest = ({navigation}) => {
         <View>
           <Text>{documentName}</Text>
         </View>
-        <View style={[styles.viewButton],{justifyContent:"center"}}>
+        <View style={styles.viewButton}>
           <Button
             title="Gönder"
             color="lightblue"

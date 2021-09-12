@@ -1,23 +1,30 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import {
   View,
   FlatList,
   ScrollView,
+  Modal,
+  Dimensions,
+  TouchableOpacity,
+  Text,
 } from 'react-native';
 import styles from './Task.style';
 import SelectDropdown from 'react-native-select-dropdown';
 import HeaderSearch from '../../component/HeaderSearch';
 import CustomTicket from '../../component/CustomTicket';
+import Sirala from '../../component/Short';
+import Filtre from '../../component/Filters';
+import TopButton from '../../component/ShortandFilter';
 
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
 function Task({navigation}) {
-  const countries = ['Yeni Biletler', 'Eski Biletler', 'A-Z Sıralama', 'Z-A Sıralama'];
-
   const DATA = [
     {
       name: 1,
-    }
+    },
   ];
   return (
     <View style={styles.container}>
@@ -25,17 +32,7 @@ function Task({navigation}) {
         title="Ticket"
         onPress={() => navigation.navigate('Home')}
       />
-      <SelectDropdown
-        defaultButtonText="Sıralama"
-        data={countries}
-        onSelect={(selectedItem, index) => {}}
-        buttonTextAfterSelection={(selectedItem, index) => {
-          return selectedItem;
-        }}
-        rowTextForSelection={(item, index) => {
-          return item;
-        }}
-      />
+      <TopButton />
       <ScrollView>
         <View style={styles.anaView}>
           <FlatList

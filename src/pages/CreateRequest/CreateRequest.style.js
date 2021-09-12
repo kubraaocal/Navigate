@@ -35,6 +35,8 @@ export default StyleSheet.create({
         marginTop:"10%",
         width:"100%",
         padding:5,
+        marginTop:20,
+        alignItems:"center"
     },
     buttonView:{
         marginTop:0,
