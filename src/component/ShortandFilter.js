@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, {useState} from 'react';
 import {
   StyleSheet,
   Text,
@@ -26,7 +26,7 @@ const ShortandFilter = () => {
   };
 
   return (
-    <View style={{flexDirection: 'row',paddingBottom:10,paddingTop:10,borderBottomWidth:0.5}}>
+    <View style={styles.container}>
       <TouchableOpacity
         style={{
           width: windowWidth / 2,
@@ -51,7 +51,7 @@ const ShortandFilter = () => {
         />
         <Sirala data={changeModalShortVisible} />
       </Modal>
-      <View style={{backgroundColor:"gray",width:1}}></View>
+      <View style={{backgroundColor: 'gray', width: 1}}></View>
       <TouchableOpacity
         style={{
           width: windowWidth / 2,
@@ -82,4 +82,11 @@ const ShortandFilter = () => {
 
 export default ShortandFilter;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    paddingBottom: 10,
+    paddingTop: 10,
+    borderBottomWidth: 0.5,
+  },
+});
